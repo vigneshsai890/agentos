@@ -1,0 +1,36 @@
+{
+  "name": "@agent-platform/agentos",
+  "version": "0.1.0",
+  "private": true,
+  "description": "LLM-neutral production starter for an agent runtime kernel",
+  "type": "module",
+  "main": "./dist/src/CoreKernel.js",
+  "types": "./dist/src/CoreKernel.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/CoreKernel.d.ts",
+      "import": "./dist/src/CoreKernel.js"
+    },
+    "./contracts": {
+      "types": "./dist/src/contracts.d.ts",
+      "import": "./dist/src/contracts.js"
+    }
+  },
+  "files": [
+    "dist",
+    "ARCHITECTURE.md"
+  ],
+  "scripts": {
+    "clean": "node -e \"require('node:fs').rmSync('dist',{recursive:true,force:true})\"",
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node --test dist/test/*.test.js"
+  },
+  "engines": {
+    "node": ">=20.11"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.2",
+    "typescript": "5.7.2"
+  }
+}
