@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 610" role="img" aria-labelledby="title desc">
+  <title id="title">AgentOS architecture map</title>
+  <desc id="desc">Documentation-only architecture map for AgentOS.</desc>
+  <defs>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#243449" stroke-width="1"/></pattern>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9Z" fill="#55D6FF"/></marker>
+    <style>
+      .label{font:700 20px Arial,Helvetica,sans-serif;letter-spacing:1px}
+      .sub{font:15px ui-monospace,SFMono-Regular,Menlo,monospace}
+      .index{font:700 13px ui-monospace,SFMono-Regular,Menlo,monospace}
+      .note{font:15px ui-monospace,SFMono-Regular,Menlo,monospace;fill:#D8E3EE}
+      .meta{font:700 13px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:2px}
+    </style>
+  </defs>
+  <rect width="1400" height="610" rx="18" fill="#07111D"/>
+  <rect x="1" y="1" width="1398" height="608" rx="17" fill="url(#grid)" stroke="#A7FF3F" stroke-opacity=".55" stroke-width="2"/>
+  <text x="80" y="70" class="meta" fill="#A7FF3F">SYSTEM MAP // AGENTOS</text>
+  <text x="80" y="112" fill="#F4F8FF" font-family="Arial,Helvetica,sans-serif" font-size="36" font-weight="900">AgentOS</text>
+  <text x="80" y="145" fill="#9EB0C2" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="15">host → kernel → policy / tools / context / model adapters</text>
+  <path d="M295.0 293.0 H313.0" class="arrow" marker-end="url(#arrow)"/><path d="M559.0 293.0 H577.0" class="arrow" marker-end="url(#arrow)"/><path d="M823.0 293.0 H841.0" class="arrow" marker-end="url(#arrow)"/><path d="M1087.0 293.0 H1105.0" class="arrow" marker-end="url(#arrow)"/>
+  <g>
+  <rect x="57.0" y="218" width="230" height="150" rx="12" fill="#0B1724" stroke="#A7FF3F" stroke-width="3"/>
+  <rect x="57.0" y="218" width="230" height="9" rx="5" fill="#A7FF3F"/>
+  <text x="172.0" y="285" class="label" text-anchor="middle" fill="#A7FF3F">HOST</text>
+  <text x="172.0" y="317" class="sub" text-anchor="middle" fill="#D8E3EE">process or API</text>
+  <text x="79.0" y="350" class="index" fill="#7F93A8">01</text>
+</g><g>
+  <rect x="321.0" y="218" width="230" height="150" rx="12" fill="#0B1724" stroke="#55D6FF" stroke-width="3"/>
+  <rect x="321.0" y="218" width="230" height="9" rx="5" fill="#55D6FF"/>
+  <text x="436.0" y="285" class="label" text-anchor="middle" fill="#55D6FF">CORE KERNEL</text>
+  <text x="436.0" y="317" class="sub" text-anchor="middle" fill="#D8E3EE">lifecycle + ordering</text>
+  <text x="343.0" y="350" class="index" fill="#7F93A8">02</text>
+</g><g>
+  <rect x="585.0" y="218" width="230" height="150" rx="12" fill="#0B1724" stroke="#FFB86B" stroke-width="3"/>
+  <rect x="585.0" y="218" width="230" height="9" rx="5" fill="#FFB86B"/>
+  <text x="700.0" y="285" class="label" text-anchor="middle" fill="#FFB86B">POLICY</text>
+  <text x="700.0" y="317" class="sub" text-anchor="middle" fill="#D8E3EE">authorization boundary</text>
+  <text x="607.0" y="350" class="index" fill="#7F93A8">03</text>
+</g><g>
+  <rect x="849.0" y="218" width="230" height="150" rx="12" fill="#0B1724" stroke="#F4F7F8" stroke-width="3"/>
+  <rect x="849.0" y="218" width="230" height="9" rx="5" fill="#F4F7F8"/>
+  <text x="964.0" y="285" class="label" text-anchor="middle" fill="#F4F7F8">TOOLS / MCP</text>
+  <text x="964.0" y="317" class="sub" text-anchor="middle" fill="#D8E3EE">namespaced dispatch</text>
+  <text x="871.0" y="350" class="index" fill="#7F93A8">04</text>
+</g><g>
+  <rect x="1113.0" y="218" width="230" height="150" rx="12" fill="#0B1724" stroke="#C8B6FF" stroke-width="3"/>
+  <rect x="1113.0" y="218" width="230" height="9" rx="5" fill="#C8B6FF"/>
+  <text x="1228.0" y="285" class="label" text-anchor="middle" fill="#C8B6FF">ADAPTERS</text>
+  <text x="1228.0" y="317" class="sub" text-anchor="middle" fill="#D8E3EE">LLM · memory · RAG</text>
+  <text x="1135.0" y="350" class="index" fill="#7F93A8">05</text>
+</g>
+  <path d="M80 452H1320" stroke="#55D6FF" stroke-opacity=".35"/>
+  <text x="80" y="475" class="meta" fill="#55D6FF">DESIGN NOTES</text>
+  <text x="80" y="490" class="note">The repository includes the current CoreKernel starter and a broader target decomposition in ARCHITECTURE.md.</text><text x="80" y="517" class="note">This presentation layer describes the intended boundary map; it does not imply every target folder is implemented.</text>
+  <text x="1320" y="570" class="meta" text-anchor="end" fill="#A7FF3F">DOCS-ONLY LAYER · SOURCE UNCHANGED</text>
+</svg>
